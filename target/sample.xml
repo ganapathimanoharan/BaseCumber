@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<testsuite failures="1" name="cucumber.runtime.formatter.JUnitFormatter" skipped="0" tests="3" time="124.665648">
+<testcase classname="Validate the adactin hotel page" name="User filling the important fields" time="54.899699">
+<system-out><![CDATA[Given user is on adacting page..............................................passed
+When user enter username and password.......................................passed
+And user click on login button..............................................passed
+Given user enter the select page details location, no of room, check in date, check out date,adults per room.passed
+Then user click on search button............................................passed
+And user filling the select hotel page select hotel.........................passed
+And user click on select hotel button.......................................passed
+When user filling the Book hotel page firstname, lastname, address, cardno, cardtype,expairymonth, expairyyear, cvvno.passed
+And user click the booknow button...........................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Validate the adactin hotel page" name="user filling the not important fields" time="21.702269">
+<failure message="junit.framework.AssertionFailedError&#13;&#10;&#9;at junit.framework.Assert.fail(Assert.java:55)&#13;&#10;&#9;at junit.framework.Assert.assertTrue(Assert.java:22)&#13;&#10;&#9;at junit.framework.Assert.assertTrue(Assert.java:31)&#13;&#10;&#9;at org.stepDefhook.StepDefHook.user_click_the_book_now_button(StepDefHook.java:109)&#13;&#10;&#9;at ✽.user click the book now button(C:/Users/Elanchezhiyan/eclipse-workspace1/BaseCumber/src/test/resources/adactinHooks.feature:19)&#13;&#10;"><![CDATA[Given user is on adacting page..............................................passed
+When user enter username and password.......................................passed
+And user click on login button..............................................passed
+Given user enter the details hotel, roomtype,childperroom...................passed
+And user click the book now button..........................................failed
+
+StackTrace:
+junit.framework.AssertionFailedError
+	at junit.framework.Assert.fail(Assert.java:55)
+	at junit.framework.Assert.assertTrue(Assert.java:22)
+	at junit.framework.Assert.assertTrue(Assert.java:31)
+	at org.stepDefhook.StepDefHook.user_click_the_book_now_button(StepDefHook.java:109)
+	at ✽.user click the book now button(C:/Users/Elanchezhiyan/eclipse-workspace1/BaseCumber/src/test/resources/adactinHooks.feature:19)
+]]></failure>
+</testcase>
+<testcase classname="Validate the adactin hotel page" name="user book and cancel ticket" time="48.06368">
+<system-out><![CDATA[Given user is on adacting page..............................................passed
+When user enter username and password.......................................passed
+And user click on login button..............................................passed
+When user enter the details in search hote page location, hotels, roomtype, roomnos, adultroom,childroom.passed
+And user click the search button............................................passed
+Then user check select hotel page visible or not............................passed
+And user select the hotel and click the search button.......................passed
+And user check booking page visible or not..................................passed
+When user enter the details in booking page firstName,lastName,address,cardno,cardtype,expmonth,expyear,cvvno.passed
+And user click the booking button...........................................passed
+And user cancel the booking.................................................passed
+]]></system-out>
+</testcase>
+</testsuite>
